@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criterio Hair Room | Peluquería Masculina en Alcobendas</title>
+<meta name="description" content="Criterio Hair Room: peluquería masculina en Alcobendas. Cortes, degradados y arreglo de barba con Victor e Isra. 5,0★ en Google (131 reseñas)." />
+<meta name="theme-color" content="#0b0b0c" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0b0b0c;
+    --charcoal: #16161a;
+    --charcoal-light: #1f1f24;
+    --line: rgba(245,245,242,.12);
+    --white: #f5f5f2;
+    --ink-soft: #b7b3ac;
+    --paper: #eeece5;
+    --paper-ink: #171613;
+    --paper-soft: #6b675e;
+    --accent: #c8433c;
+    --accent-light: #e2665f;
+    --accent-dark: #8a2e2a;
+    --radius: 4px;
+    --font-display: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --container: 1180px;
+    --header-h: 84px;
+    --ease: cubic-bezier(.2, .7, .2, 1);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+  body {
+    font-family: var(--font-body);
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.7;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+  button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .container { width: min(var(--container), 100% - 40px); margin-inline: auto; }
+  .section { padding: clamp(80px, 11vw, 140px) 0; position: relative; }
+  .section.light { background: var(--paper); color: var(--paper-ink); }
+
+  .bgtext {
+    position: absolute; inset: 0; overflow: hidden; z-index: 0; pointer-events: none;
+    font-family: var(--font-display); font-size: 15vw; line-height: 1; white-space: nowrap;
+    color: transparent; -webkit-text-stroke: 1px rgba(245,245,242,.05);
+    display: flex; align-items: center; letter-spacing: .04em;
+  }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: .75rem; letter-spacing: .3em; text-transform: uppercase;
+    color: var(--accent-light); font-weight: 600;
+  }
+  .eyebrow::before { content: ""; width: 34px; height: 2px; background: var(--accent); }
+  .light .eyebrow { color: var(--accent-dark); }
+  .light .eyebrow::before { background: var(--accent-dark); }
+
+  .section-title {
+    font-family: var(--font-display); font-weight: 400; text-transform: uppercase;
+    font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: .98; letter-spacing: .01em;
+    margin: 18px 0 20px;
+  }
+  .section-title em { color: var(--accent); font-style: normal; }
+  .section-lead { color: var(--ink-soft); max-width: 620px; font-size: 1.05rem; }
+  .light .section-lead { color: var(--paper-soft); }
+  .section-head { margin-bottom: 60px; position: relative; z-index: 1; }
+  .section-head.center { text-align: center; }
+  .section-head.center .section-lead { margin-inline: auto; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 16px 30px; border-radius: var(--radius);
+    font-size: .82rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+    transition: transform .3s var(--ease), background .3s, color .3s, box-shadow .3s, border-color .3s;
+    white-space: nowrap; border: 1px solid var(--white);
+  }
+  .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .btn-outline { color: var(--white); background: transparent; }
+  .btn-outline:hover { background: var(--white); color: var(--black); transform: translateY(-2px); }
+  .light .btn-outline { border-color: var(--paper-ink); color: var(--paper-ink); }
+  .light .btn-outline:hover { background: var(--paper-ink); color: var(--paper); }
+  .btn-solid { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn-solid:hover { background: var(--accent-dark); border-color: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 16px 34px -14px rgba(200,67,60,.6); }
+  .btn-whatsapp { background: #25d366; border-color: #25d366; color: #06280f; }
+  .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -12px rgba(37, 211, 102, .6); }
+
+  .header {
+    position: fixed; inset: 0 0 auto 0; z-index: 100;
+    height: var(--header-h);
+    display: flex; align-items: center;
+    transition: background .4s, border-color .4s;
+    border-bottom: 1px solid transparent;
+  }
+  .header.scrolled { background: rgba(11,11,12,.94); backdrop-filter: blur(14px); border-bottom-color: var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .logo { display: flex; flex-direction: column; line-height: .9; }
+  .logo-mark { font-family: var(--font-display); font-size: 2.1rem; letter-spacing: .03em; color: var(--white); }
+  .logo-mark span { color: var(--accent); }
+  .logo-sub { font-size: .58rem; letter-spacing: .32em; text-transform: uppercase; color: var(--ink-soft); margin-top: 2px; }
+
+  .nav-links { display: flex; align-items: center; gap: 30px; }
+  .nav-links a {
+    font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--white);
+    position: relative; padding: 6px 0; transition: color .3s; font-weight: 500;
+  }
+  .nav-links a::after {
+    content: ""; position: absolute; left: 0; bottom: 0; height: 1px; width: 100%;
+    background: var(--accent); transform: scaleX(0); transform-origin: right; transition: transform .35s var(--ease);
+  }
+  .nav-links a:hover { color: var(--accent-light); }
+  .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+  .nav-links .mobile-only { display: none; }
+  .nav-links a.btn { padding: 14px 26px; }
+  .nav-links a.btn::after { display: none; }
+  .nav-cta { padding: 12px 22px; }
+
+  .menu-toggle { display: none; width: 44px; height: 44px; position: relative; z-index: 120; }
+  .menu-toggle span {
+    position: absolute; left: 10px; right: 10px; height: 2px; background: var(--white);
+    transition: transform .35s var(--ease), opacity .25s, top .35s var(--ease);
+  }
+  .menu-toggle span:nth-child(1) { top: 15px; }
+  .menu-toggle span:nth-child(2) { top: 21px; }
+  .menu-toggle span:nth-child(3) { top: 27px; }
+  .menu-open .menu-toggle span:nth-child(1) { top: 21px; transform: rotate(45deg); }
+  .menu-open .menu-toggle span:nth-child(2) { opacity: 0; }
+  .menu-open .menu-toggle span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
+
+  .hero {
+    position: relative; min-height: 100vh; min-height: 100svh;
+    display: flex; align-items: flex-end;
+    padding: calc(var(--header-h) + 40px) 0 100px;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: url("interior.jpg") center 30%/cover no-repeat;
+    transform: scale(1.06);
+    animation: heroZoom 20s ease-out forwards;
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(0deg, rgba(11,11,12,.97) 5%, rgba(11,11,12,.55) 55%, rgba(11,11,12,.35) 100%),
+      linear-gradient(90deg, rgba(11,11,12,.5) 0%, transparent 55%);
+  }
+  @keyframes heroZoom { to { transform: scale(1); } }
+  .hero-content { position: relative; z-index: 2; max-width: 760px; }
+  .hero-title {
+    font-family: var(--font-display); font-weight: 400; text-transform: uppercase; color: var(--white);
+    font-size: clamp(3.2rem, 9vw, 7rem); line-height: .92; margin: 20px 0 26px; letter-spacing: .01em;
+  }
+  .hero-title em { color: var(--accent); font-style: normal; }
+  .hero-text { font-size: clamp(1rem, 1.6vw, 1.15rem); color: #d8d5cd; max-width: 520px; margin-bottom: 34px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+  .hero-rating {
+    display: inline-flex; align-items: center; gap: 10px; margin-top: 40px;
+    font-size: .85rem; color: var(--ink-soft); letter-spacing: .04em;
+  }
+  .hero-rating b { color: var(--white); font-family: var(--font-display); font-size: 1.3rem; letter-spacing: .04em; }
+
+  .stats { background: var(--charcoal); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 30px 0; position: relative; z-index: 1; }
+  .stats .wrap { display: grid; grid-template-columns: repeat(4,1fr); text-align: center; gap: 20px; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  .stats b { display: block; font-family: var(--font-display); font-size: 1.9rem; color: var(--accent-light); letter-spacing: .03em; }
+  .stats span { font-size: .68rem; text-transform: uppercase; letter-spacing: .12em; color: var(--ink-soft); }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(40px, 7vw, 100px); align-items: center; position: relative; z-index: 1; }
+  .about-media { position: relative; }
+  .about-media .img-main { aspect-ratio: 4/5; border-radius: var(--radius); overflow: hidden; background: var(--charcoal); }
+  .about-media img { width: 100%; height: 100%; object-fit: cover; }
+  .about-media::before { content: ""; position: absolute; inset: -16px 16px 16px -16px; border: 1px solid rgba(200,67,60,.5); border-radius: var(--radius); z-index: -1; }
+  .about-badge {
+    position: absolute; right: -20px; bottom: 32px;
+    background: var(--accent); color: #fff; border-radius: var(--radius);
+    padding: 20px 24px; text-align: center; box-shadow: 0 24px 50px -20px rgba(0,0,0,.6);
+  }
+  .about-badge .num { font-family: var(--font-display); font-size: 2rem; line-height: 1; }
+  .about-badge .lbl { font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; margin-top: 6px; opacity: .9; }
+  .about-text p { color: var(--ink-soft); margin-bottom: 18px; }
+  .about-quote {
+    margin-top: 30px; padding: 22px 26px; border-left: 3px solid var(--accent);
+    background: var(--charcoal); border-radius: 0 var(--radius) var(--radius) 0;
+    font-style: italic; color: #d8d5cd; font-size: .96rem;
+  }
+  .about-quote cite { display: block; margin-top: 10px; font-style: normal; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+  .pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 34px; }
+  .pillar { padding-top: 18px; border-top: 1px solid var(--line); }
+  .pillar h3 { font-family: var(--font-display); font-weight: 400; letter-spacing: .03em; text-transform: uppercase; color: var(--white); font-size: 1.2rem; margin-bottom: 6px; }
+  .pillar p { font-size: .88rem; color: var(--ink-soft); margin: 0; line-height: 1.55; }
+
+  .services { background: var(--charcoal); }
+  .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; z-index: 1; }
+  .service-card {
+    position: relative; overflow: hidden;
+    background: var(--black); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 32px 24px 28px;
+    transition: transform .4s var(--ease), border-color .4s;
+  }
+  .service-card:hover { transform: translateY(-6px); border-color: var(--accent); }
+  .service-icon {
+    width: 50px; height: 50px; border-radius: 50%;
+    display: grid; place-items: center; margin-bottom: 20px;
+    border: 1px solid var(--accent); color: var(--accent-light);
+  }
+  .service-icon svg { width: 22px; height: 22px; }
+  .service-card h3 { font-family: var(--font-display); font-weight: 400; letter-spacing: .03em; text-transform: uppercase; font-size: 1.35rem; color: var(--white); margin-bottom: 6px; }
+  .service-card p { font-size: .85rem; color: var(--ink-soft); margin: 0; }
+
+  .portfolio { position: relative; z-index: 1; }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .portfolio-grid img {
+    width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); display: block;
+    box-shadow: 0 20px 44px -26px rgba(0,0,0,.7);
+  }
+  @media (max-width: 700px) { .portfolio-grid { grid-template-columns: 1fr; } }
+
+  .testimonials { background: var(--charcoal); position: relative; z-index: 1; }
+  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .testi-card {
+    background: var(--black); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 30px 26px;
+  }
+  .testi-stars { color: var(--accent-light); font-size: .95rem; letter-spacing: .1em; margin-bottom: 14px; }
+  .testi-card p { font-size: .92rem; color: #d8d5cd; margin-bottom: 18px; }
+  .testi-card cite { font-style: normal; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+  @media (max-width: 860px) { .testi-grid { grid-template-columns: 1fr; } }
+
+  .cta-band {
+    position: relative; padding: clamp(70px, 9vw, 110px) 0; text-align: center; overflow: hidden;
+    background: linear-gradient(135deg, var(--accent-dark), var(--black) 70%);
+    border-block: 1px solid var(--line);
+  }
+  .cta-band .container { position: relative; z-index: 1; }
+  .cta-band h2 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; color: #fff; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: .98; margin-bottom: 16px; }
+  .cta-band h2 em { color: var(--accent-light); font-style: normal; }
+  .cta-band p { color: #e6e2d9; margin-bottom: 32px; }
+  .cta-band .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 30px; align-items: stretch; position: relative; z-index: 1; }
+  .contact-card { background: #fff; border: 1px solid rgba(23,22,19,.1); border-radius: var(--radius); padding: clamp(28px, 4vw, 44px); }
+  .contact-item { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid rgba(23,22,19,.1); }
+  .contact-item:first-child { padding-top: 0; }
+  .contact-item:last-of-type { border-bottom: 0; }
+  .contact-item .ic { width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--accent-dark); color: var(--accent-dark); }
+  .contact-item .ic svg { width: 19px; height: 19px; }
+  .contact-item h3 { font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-dark); font-weight: 700; margin-bottom: 4px; }
+  .contact-item p, .contact-item a { color: var(--paper-ink); font-size: 1rem; }
+  .contact-item a:hover { color: var(--accent); }
+  .contact-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 26px; }
+  .contact-actions .btn { border-color: var(--paper-ink); color: var(--paper-ink); }
+  .map-wrap { border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(23,22,19,.1); min-height: 340px; background: #fff; position: relative; }
+  .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(.15); }
+
+  .footer { padding: 70px 0 34px; background: var(--black); border-top: 1px solid var(--line); }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; padding-bottom: 44px; border-bottom: 1px solid var(--line); }
+  .footer-brand p { color: var(--ink-soft); max-width: 320px; font-size: .9rem; margin-top: 16px; }
+  .footer-nav { display: flex; gap: 60px; flex-wrap: wrap; }
+  .footer-nav h4 { font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-light); font-weight: 700; margin-bottom: 16px; }
+  .footer-nav li { margin-bottom: 8px; font-size: .9rem; color: var(--ink-soft); }
+  .footer-nav a:hover { color: var(--white); }
+  .socials { display: flex; gap: 12px; margin-top: 22px; }
+  .socials a { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line); color: var(--white); transition: all .3s; }
+  .socials a:hover { border-color: var(--accent); color: var(--accent-light); }
+  .socials svg { width: 18px; height: 18px; }
+  .footer-bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 26px; font-size: .8rem; color: var(--ink-soft); }
+
+  .wa-float { position: fixed; bottom: 24px; right: 24px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,.5); z-index: 60; }
+  .wa-float svg { width: 30px; height: 30px; fill: #fff; }
+
+  @media (max-width: 900px) {
+    :root { --header-h: 72px; }
+    .menu-toggle { display: block; }
+    .nav-cta.desktop { display: none; }
+    .nav-links {
+      position: fixed; inset: 0; z-index: 110;
+      flex-direction: column; justify-content: center; gap: 26px;
+      background: rgba(11,11,12,.98); backdrop-filter: blur(10px);
+      opacity: 0; visibility: hidden; transition: opacity .4s, visibility .4s;
+    }
+    .nav-links a { font-family: var(--font-display); font-size: 2rem; letter-spacing: .03em; }
+    .nav-links .btn { font-family: var(--font-body); font-size: .85rem; margin-top: 14px; }
+    .menu-open .nav-links { opacity: 1; visibility: visible; }
+    .nav-links .mobile-only { display: block; }
+    .menu-open { overflow: hidden; }
+
+    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .about-media { max-width: 480px; margin-inline: auto; width: calc(100% - 18px); margin-left: 18px; }
+    .about-badge { right: -8px; }
+    .services-grid { grid-template-columns: repeat(2,1fr); }
+    .map-wrap { min-height: 300px; }
+    .stats .wrap { grid-template-columns: repeat(2,1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .container { width: calc(100% - 32px); }
+    .pillars { grid-template-columns: 1fr; gap: 0; }
+    .pillar { padding: 16px 0; }
+    .hero-actions .btn { flex: 1 1 100%; }
+    .contact-actions { grid-template-columns: 1fr; }
+    .logo-sub { display: none; }
+    .footer-nav { gap: 36px; }
+    .services-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <nav class="container nav" aria-label="Navegación principal">
+      <a href="#inicio" class="logo" aria-label="Criterio Hair Room, inicio">
+        <span class="logo-mark">Criterio<span>.</span></span>
+        <span class="logo-sub">Hair Room · Alcobendas</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li class="mobile-only"><a href="https://wa.me/34641433262?text=Hola%20Criterio%20Hair%20Room%2C%20quer%C3%ADa%20reservar%20una%20cita." class="btn btn-solid js-whatsapp" target="_blank" rel="noopener">Reservar cita</a></li>
+      </ul>
+
+      <a href="https://wa.me/34641433262?text=Hola%20Criterio%20Hair%20Room%2C%20quer%C3%ADa%20reservar%20una%20cita." class="btn btn-solid nav-cta desktop js-whatsapp" target="_blank" rel="noopener">Reservar cita</a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-bg" role="img" aria-label="Interior de Criterio Hair Room"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow reveal">Alcobendas · Peluquería masculina</span>
+          <h1 class="hero-title reveal d1">Corte con<br><em>Criterio.</em></h1>
+          <p class="hero-text reveal d2">
+            Cortes, degradados y arreglo de barba hechos con tiempo y buen ojo.
+            Victor e Isra te atienden en Calle Manuel de Falla, 26.
+          </p>
+          <div class="hero-actions reveal d3">
+            <a href="https://wa.me/34641433262?text=Hola%20Criterio%20Hair%20Room%2C%20quer%C3%ADa%20reservar%20una%20cita." class="btn btn-solid js-whatsapp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg>
+              Reservar cita
+            </a>
+            <a class="btn btn-outline" href="#servicios">Ver servicios</a>
+          </div>
+          <div class="hero-rating reveal d3">
+            <b>5,0 ★</b>&nbsp;· 131 reseñas en Google
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="wrap">
+        <div><b>5,0★</b><span>131 reseñas Google</span></div>
+        <div><b>Victor</b><span>&amp; Isra</span></div>
+        <div><b>Fade</b><span>Degradados</span></div>
+        <div><b>Alcobendas</b><span>C. Manuel de Falla, 26</span></div>
+      </div>
+    </div>
+
+    <section class="section about" id="nosotros">
+      <div class="bgtext">CRITERIO CRITERIO CRITERIO CRITERIO</div>
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <div class="img-main">
+            <img src="exterior.jpg" alt="Fachada de Criterio Hair Room en Alcobendas" loading="lazy" width="900" height="1125" />
+          </div>
+          <div class="about-badge">
+            <div class="num">5,0★</div>
+            <div class="lbl">131 reseñas</div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <span class="eyebrow reveal">Nuestra barbería</span>
+          <h2 class="section-title reveal d1">Peluquería<br>con <em>oficio.</em></h2>
+          <p class="reveal d2">
+            En <strong>Criterio Hair Room</strong> cada corte tiene su proceso: nada de prisas ni
+            tijeretazos al peso. <strong>Victor</strong> e <strong>Isra</strong> te atienden como en
+            casa, cuidando cada degradado y cada línea de barba hasta que el resultado
+            esté a la altura.
+          </p>
+          <p class="reveal d2">
+            Nos encontrarás en la <strong>Calle Manuel de Falla, 26</strong>, en Alcobendas.
+          </p>
+
+          <div class="about-quote reveal d2">
+            "El trabajo y el trato de Victor e Isra es inmejorable, como si estuvieras en tu casa."
+            <cite>— Alfonso Tellez Rubio, Google</cite>
+          </div>
+
+          <div class="pillars">
+            <div class="pillar reveal d1">
+              <h3>Sin prisas</h3>
+              <p>Cada corte y cada barba se trabajan con el tiempo que necesitan.</p>
+            </div>
+            <div class="pillar reveal d2">
+              <h3>5,0 en Google</h3>
+              <p>131 reseñas reales de clientes de Alcobendas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="servicios">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow reveal">Servicios</span>
+          <h2 class="section-title reveal d1">Lo que <em>hacemos</em></h2>
+          <p class="section-lead reveal d2">Consulta precios y disponibilidad por WhatsApp.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l3 6-9 12L3 9Z"/><path d="M3 9h18M12 21 8 9l4-6 4 6Z"/></svg></div>
+            <h3>Corte clásico</h3>
+            <p>Tijera o máquina, a tu medida.</p>
+          </article>
+          <article class="service-card reveal d1">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h6"/></svg></div>
+            <h3>Degradado</h3>
+            <p>Fade, taper y skin fade con precisión.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4c3 0 4 3 6 3s3-3 6-3M6 4c0 6 2 9 2 13a4 4 0 0 0 8 0c0-4 2-7 2-13"/></svg></div>
+            <h3>Arreglo de barba</h3>
+            <p>Perfilado y afeitado de precisión.</p>
+          </article>
+          <article class="service-card reveal d1">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Corte + Barba</h3>
+            <p>El combo completo, en una sola cita.</p>
+          </article>
+        </div>
+
+        <div style="text-align:center;margin-top:40px;">
+          <a href="https://wa.me/34641433262?text=Hola%20Criterio%20Hair%20Room%2C%20quer%C3%ADa%20reservar%20una%20cita." class="btn btn-solid js-whatsapp" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio" id="galeria">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow reveal">Galería</span>
+          <h2 class="section-title reveal d1">Así es <em>Criterio.</em></h2>
+          <p class="section-lead reveal d2">Nuestro local en Alcobendas, por dentro y por fuera.</p>
+        </div>
+        <div class="portfolio-grid">
+          <img class="reveal" src="exterior.jpg" alt="Fachada de Criterio Hair Room" loading="lazy">
+          <img class="reveal d1" src="interior.jpg" alt="Interior de Criterio Hair Room, corte en proceso" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="opiniones">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow reveal">Opiniones</span>
+          <h2 class="section-title reveal d1">Lo que dicen <em>de nosotros</em></h2>
+          <p class="section-lead reveal d2">Reseñas reales de Google, 5,0★ sobre 131 opiniones.</p>
+        </div>
+        <div class="testi-grid">
+          <div class="testi-card reveal">
+            <div class="testi-stars">★★★★★</div>
+            <p>"Excelente experiencia. Desde que entras, el ambiente es muy agradable y el personal es súper profesional y amable. El resultado superó mis expectativas."</p>
+            <cite>Mario Gámez</cite>
+          </div>
+          <div class="testi-card reveal d1">
+            <div class="testi-stars">★★★★★</div>
+            <p>"Mi hijo vio la peluquería por Instagram y fuimos a probar y salió encantado, trato muy recomendable y empleados muy atentos y simpáticos."</p>
+            <cite>Martina B.S.</cite>
+          </div>
+          <div class="testi-card reveal d2">
+            <div class="testi-stars">★★★★★</div>
+            <p>"En muy poco tiempo se ha convertido en mi peluquería de confianza. El trabajo y el trato de Victor e Isra es inmejorable, como si estuvieras en tu casa."</p>
+            <cite>Alfonso Téllez Rubio</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <h2 class="reveal">¿Reservamos tu <em>próximo corte?</em></h2>
+        <p class="reveal d1">Escríbenos por WhatsApp y te confirmamos hueco con Victor o Isra.</p>
+        <div class="actions reveal d2">
+          <a href="https://wa.me/34641433262?text=Hola%20Criterio%20Hair%20Room%2C%20quer%C3%ADa%20reservar%20una%20cita." class="btn btn-whatsapp js-whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg>
+            Reservar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="contacto">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow reveal">Contacto</span>
+          <h2 class="section-title reveal d1">Te esperamos en <em>Alcobendas</em></h2>
+          <p class="section-lead reveal d2">Reserva tu cita por WhatsApp o pásate directamente por el local.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <div class="contact-item">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div>
+                <h3>Dirección</h3>
+                <p>Calle Manuel de Falla, 26<br>28100 Alcobendas, Madrid</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+              <div>
+                <h3>WhatsApp / Citas Victor</h3>
+                <a href="https://wa.me/34641433262">641 43 32 62</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
+              <div>
+                <h3>Instagram</h3>
+                <a href="https://www.instagram.com/criteriohairroom/" target="_blank" rel="noopener">@criteriohairroom</a>
+              </div>
+            </div>
+
+            <div class="contact-actions">
+              <a href="https://wa.me/34641433262?text=Hola%20Criterio%20Hair%20Room%2C%20quer%C3%ADa%20reservar%20una%20cita." class="btn btn-whatsapp js-whatsapp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg>
+                WhatsApp
+              </a>
+              <a href="https://www.instagram.com/criteriohairroom/" class="btn btn-outline" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+
+          <div class="map-wrap reveal d1">
+            <iframe
+              title="Mapa de Criterio Hair Room en Calle Manuel de Falla 26, Alcobendas"
+              src="https://maps.google.com/maps?q=Calle%20Manuel%20de%20Falla%2026%2C%20Alcobendas&z=16&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#inicio" class="logo"><span class="logo-mark">Criterio<span>.</span></span><span class="logo-sub">Hair Room · Alcobendas</span></a>
+          <p>Peluquería masculina en Alcobendas. Cortes, degradados y arreglo de barba con Victor e Isra.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/criteriohairroom/" target="_blank" rel="noopener" aria-label="Instagram de Criterio Hair Room">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+            <a href="https://wa.me/34641433262?text=Hola%20Criterio%20Hair%20Room%2C%20quer%C3%ADa%20reservar%20una%20cita." class="js-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp de Criterio Hair Room">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <div>
+            <h4>Navegación</h4>
+            <ul>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#galeria">Galería</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Visítanos</h4>
+            <ul>
+              <li>Calle Manuel de Falla, 26</li>
+              <li>Alcobendas, Madrid</li>
+              <li><a href="https://wa.me/34641433262">641 43 32 62</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Criterio Hair Room. Todos los derechos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/34641433262?text=Hola%20Criterio%20Hair%20Room%2C%20quer%C3%ADa%20reservar%20una%20cita." class="wa-float js-whatsapp" target="_blank" rel="noopener" aria-label="Reservar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg>
+  </a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const header = document.getElementById('header');
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const body = document.body;
+    const toggle = document.getElementById('menu-toggle');
+    const setMenu = open => {
+      body.classList.toggle('menu-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    };
+    toggle.addEventListener('click', () => setMenu(!body.classList.contains('menu-open')));
+    document.querySelectorAll('#nav-links a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObs.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => { el.style.opacity=0; el.style.transform='translateY(20px)'; el.style.transition='opacity .7s ease, transform .7s ease'; revealObs.observe(el); });
+    const revealStyle = document.createElement('style');
+    revealStyle.textContent = '.reveal.visible{opacity:1 !important;transform:none !important;}';
+    document.head.appendChild(revealStyle);
+  </script>
+</body>
+</html>
